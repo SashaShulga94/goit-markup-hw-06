@@ -470,7 +470,27 @@ body {
   display: flex;
   align-items: baseline;
 }
-
+.footer-form{
+  display: flex;
+  justify-content: baseline;
+  margin-left: 93px;
+}
+.footer-input{
+  width: 358px;
+  height: 50px;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6) 
+}
+.footer-form-button{
+  width: 200px;
+  height: 50px;
+  
+}
 /*=========================== backdrop ============================*/
 .backdrop {
   position: fixed;
