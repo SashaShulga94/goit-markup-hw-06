@@ -470,9 +470,18 @@ body {
   display: flex;
   align-items: baseline;
 }
+.footer-form-title{
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+color: var(--primary-text-color-theme-light);
+margin-bottom: 20px;
+text-transform: uppercase;
+}
 .footer-form{
-  display: flex;
-  justify-content: baseline;
+ display: inline;
+ 
+  width: 570px;
   margin-left: 93px;
 }
 .footer-input{
@@ -487,9 +496,19 @@ body {
   color: rgba(255, 255, 255, 0.6) 
 }
 .footer-form-button{
+  position: relative;
   width: 200px;
   height: 50px;
-  
+ padding-left: 8px;
+ margin-left: 12px;
+
+}
+.icon-sign-up{
+  position: absolute;
+  margin-left: 10px;
+}
+.footer-form-email{
+display: inline;
 }
 /*=========================== backdrop ============================*/
 .backdrop {
