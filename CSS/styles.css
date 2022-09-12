@@ -470,21 +470,24 @@ body {
   display: flex;
   align-items: baseline;
 }
-.footer-form-title{
-font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-color: var(--primary-text-color-theme-light);
-margin-bottom: 20px;
-text-transform: uppercase;
+.footer-form-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--primary-text-color-theme-light);
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
-.footer-form{
- display: inline;
- 
+.footer-form-email {
+  display: flex;
+}
+.footer-form {
   width: 570px;
   margin-left: 93px;
 }
-.footer-input{
+
+.footer-input {
+  display: inline;
   width: 358px;
   height: 50px;
   border-radius: 4px;
@@ -493,23 +496,21 @@ text-transform: uppercase;
   border: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 16px;
   line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6) 
+  color: rgba(255, 255, 255, 0.6);
 }
-.footer-form-button{
+.footer-form-button {
+  display: inline;
   position: relative;
   width: 200px;
   height: 50px;
- padding-left: 8px;
- margin-left: 12px;
-
+  padding-left: 8px;
+  margin-right: 0;
 }
-.icon-sign-up{
+.icon-sign-up {
   position: absolute;
   margin-left: 10px;
 }
-.footer-form-email{
-display: inline;
-}
+
 /*=========================== backdrop ============================*/
 .backdrop {
   position: fixed;
@@ -552,26 +553,26 @@ display: inline;
 
 /* =================== MODAL FORM ========================== */
 
-.modal-form{
-display: flex;
-flex-direction: column;
-padding: 0px 40px;
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 40px;
 }
-.modal-input:focus{
+.modal-input:focus {
   outline: none;
   border-color: var(--accent-color);
 }
-.form-title{
-font-weight: 700;
-font-size: 20px;
-line-height: 1.15;
-text-align: center;
-padding-left: 40px;
-padding-right: 40px;
-padding-top: 40px;
-margin-bottom: 12px;
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  margin-bottom: 12px;
 }
-.modal-input{
+.modal-input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -579,43 +580,88 @@ margin-bottom: 12px;
   padding-left: 42px;
   transition: border-color var(--trnsform-cubic);
 }
-.modal-form-name-field{
-display: block;
-font-size: 12px;
-line-height: 1.16;
-color: var(--secondary-color-theme-gray);
-margin-bottom: 4px;
+.modal-form-name-field {
+  display: block;
+  font-size: 12px;
+  line-height: 1.16;
+  color: var(--secondary-color-theme-gray);
+  margin-bottom: 4px;
 }
-.modal-form-lable{
+.modal-form-lable {
   margin-bottom: 10px;
 }
-.input-field-icon{
+.input-field-icon {
   position: relative;
 }
-.icon-modal-form{
+.icon-modal-form {
   position: absolute;
   top: 0;
   left: 15px;
   fill: var(--primary-text-color-theme-dark);
-  transition: fill var(--trnsform-cubic)
+  transition: fill var(--trnsform-cubic);
 }
-.modal-input:focus + .icon-modal-form{
+.modal-input:focus + .icon-modal-form {
   fill: var(--accent-color);
 }
-.modal-textarea{
+.modal-textarea {
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px;
   resize: none;
+  margin-bottom: 20px;
   transition: border-color var(--trnsform-cubic);
 }
-.modal-textarea:focus{
+.modal-textarea:focus {
   outline: none;
   border-color: var(--accent-color);
 }
-
+.modal-textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-check {
+  appearance: none;
+  position: absolute;
+}
+.modal-form-terms {
+  color: var(--accent-color);
+}
+.modal-form-submit {
+  width: 200px;
+  height: 50px;
+  border: 1px solid var(--accent-color);
+}
+.modal-form-label-check {
+  display: flex;
+  justify-content: baseline;
+  margin-bottom: 30px;
+}
+.modal-form-check-icon {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--primary-text-color-theme-dark);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 7px;
+  transition: background-color var(--trnsform-cubic),
+    border-color var(--trnsform-cubic);
+}
+.modal-form-check-mark {
+  display: none;
+  fill: var(--primary-text-color-theme-light);
+  transition: fill var(--trnsform-cubic);
+}
+.modal-form-check:checked + .modal-form-check-icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.modal-form-check:checked + .modal-form-check-icon .modal-form-check-mark {
+  display: block;
+}
+.modal-form-check:focus + .modal-form-check-icon {
+  box-shadow: 0 0 0 2px var(--accent-color);
+}
 /*==================================== portfolio ========================= */
 
 .portfolio-section {
