@@ -483,7 +483,7 @@ body {
 }
 .footer-form {
   width: 570px;
-  margin-left: 93px;
+  margin-left: auto;
 }
 
 .footer-input {
@@ -530,6 +530,7 @@ body {
   width: 528px;
   height: 581px;
   background-color: var(--primary-text-color-theme-light);
+  padding: 40px;
 }
 .button-close {
   position: absolute;
@@ -544,6 +545,11 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   cursor: pointer;
+  fill: var(--secondary-text-color-theme-dark);
+  transition: color var(--trnsform-cubic);
+}
+.button-close:hover, .button-close:focus{
+  fill: var(--accent-color);
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -556,7 +562,6 @@ body {
 .modal-form {
   display: flex;
   flex-direction: column;
-  padding: 0px 40px;
 }
 .modal-input:focus {
   outline: none;
@@ -567,9 +572,8 @@ body {
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 40px;
+  
+  
   margin-bottom: 12px;
 }
 .modal-input {
@@ -603,6 +607,9 @@ body {
 .modal-input:focus + .icon-modal-form {
   fill: var(--accent-color);
 }
+.modal-form-lable-coment{
+  margin-bottom: 15px;
+}
 .modal-textarea {
   width: 100%;
   height: 120px;
@@ -610,7 +617,6 @@ body {
   border-radius: 4px;
   padding: 12px 16px;
   resize: none;
-  margin-bottom: 20px;
   transition: border-color var(--trnsform-cubic);
 }
 .modal-textarea:focus {
@@ -624,6 +630,7 @@ body {
   appearance: none;
   position: absolute;
 }
+
 .modal-form-terms {
   color: var(--accent-color);
 }
@@ -634,14 +641,19 @@ body {
 }
 .modal-form-label-check {
   display: flex;
-  justify-content: baseline;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--secondary-color-theme-gray);
 }
 .modal-form-check-icon {
   width: 16px;
   height: 15px;
   border: 2px solid var(--primary-text-color-theme-dark);
   border-radius: 2px;
+  color: var(--primary-text-color-theme-dark);
   cursor: pointer;
   margin-right: 7px;
   transition: background-color var(--trnsform-cubic),
